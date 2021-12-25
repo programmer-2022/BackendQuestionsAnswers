@@ -19,11 +19,9 @@ const connection = require('./db/connection')
 
 //Cargar rutas
 const routesQuestion = require('./routes/Question')
-const routesCategory = require('./routes/Category')
 
 //Rutas base
 app.use('/api', routesQuestion)
-app.use('/api', routesCategory)
 
 //Iniciar Servidor 
 app.listen(port, () => {

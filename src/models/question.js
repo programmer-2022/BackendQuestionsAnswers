@@ -3,6 +3,7 @@ const Schema = mongoose.Schema
 
 const questionSchema = new Schema({
     questionText : String,
+    category : String,
     answerOptions : Array
 })
 

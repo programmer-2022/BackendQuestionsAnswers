@@ -5,7 +5,7 @@ const getQuestions = async (req, res) => {
         const arrayQuestions = await Question.find()
         res.status(200).send({ questions: arrayQuestions})
     } catch (error) {
-        console.log(error);
+        console.log(error)
     }
 }
 
@@ -18,11 +18,17 @@ const addQuestion = async (req, res) => {
            res.status(200).send({ message: "Se almacenaron los datos correctamente" })
         }    
     } catch (error) {
-        console.log(error);
+        console.log(error)
     }
+}
+
+const getCountDocuments = async (req, res) => {
+    const count = await Question.countDocuments({})
+    res.status(200).send({ count })
 }
 
 module.exports = {
     getQuestions,
-    addQuestion
+    addQuestion,
+    getCountDocuments
 }
