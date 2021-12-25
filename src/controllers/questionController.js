@@ -15,9 +15,7 @@ const addQuestion = async (req, res) => {
     try {
         if(body !== null) {
            await Question.create(body)
-           //res.status(200).send({ message: "Se almacenaron los datos correctamente" })
-           console.log("Exitoso");
-           //res.redirect('/questions')
+           res.status(200).send({ message: "Se almacenaron los datos correctamente" })
         }    
     } catch (error) {
         console.log(error);
